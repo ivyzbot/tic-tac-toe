@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Mooli', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+h1 {
+    color: purple
+}
+
+#board {
+    height: 500px;
+    width: 500px;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-color: black;
+    border-style: solid;
+}
+
+#board > div {
+    border-color: black;
+    border-style: solid;
+}
