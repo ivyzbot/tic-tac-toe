@@ -10,10 +10,12 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
+    background-color: lightcyan;
 }
 
 h1 {
-    color: purple
+    color: green;
+    font-size: 50px;
 }
 
 #board {
@@ -30,4 +32,34 @@ h1 {
 #board > div {
     border-color: black;
     border-style: solid;
+}
+
+#play-again-btn {
+    border-color: gray;
+    font-size: 30px;
+    color: gray;
+    border-radius: 5%;
+    padding: 5px;
+    background-color: transparent;
+    transition-duration: 0.4s;
+
+}
+
+#play-again-btn:hover {
+    color: beige;
+    background-color: gray;
+    border-color: gray;
+}
+
+.PURPLE {
+    color: purple;
+}
+
+.ORANGE {
+    color: orange;
+}
+
+.blank-box:hover {
+    background-color: lightgreen !important;
+    cursor: grab;
 }

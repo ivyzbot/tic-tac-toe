@@ -57,12 +57,12 @@ function renderMessage() {
     const currentColor = color[turn].toUpperCase();
     
     if (!winner) {
-        h1El.innerHTML = `${currentColor}'s Turn`;
+        h1El.innerHTML = `<span class="${currentColor}">${currentColor}</span>'s Turn`;
     } else if (winner === 'T') {
         h1El.innerHTML = 'It\'s a tie!!!';
     } else {
         const currentWinner = color[winner].toUpperCase();
-        h1El.innerHTML = `Congrates ${currentWinner}! You won!`
+        h1El.innerHTML = `Congrates <span class="${currentWinner}">${currentWinner}</span>! You won!`
     }
 }
 
@@ -83,6 +83,11 @@ function renderMessage() {
  function fillBoardColor(sqaure, index) {
     const sqaureEl = sqauresEl[index];
     sqaureEl.style.backgroundColor = color[sqaure];
+    if (!sqaure) {
+        sqaureEl.className = "blank-box";
+    } else {
+        sqaureEl.className = "";
+    }
  }
 
  function checkWinner() {
